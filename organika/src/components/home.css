@@ -1,0 +1,20 @@
+.homepage{
+    font-size:1rem;
+    height:90vh;
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+.homepage-welcome{
+    font-weight: 400;
+}
+
+.homepage h1{ 
+    color:whitesmoke;
+    padding-top: 30vh;
+    font-size: 100px;
+    font-weight: bold;
+    color: rgb(22,94,106);
+    /* -webkit-text-stroke: 3px rgb(36, 136, 106); */
+    height:90vh;
+    background: rgba(255,255,255,.55);
+}

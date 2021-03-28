@@ -1,0 +1,14 @@
+.footer-cr{
+    text-align: center;
+}
+.footer-cr-absolute{
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+}
+.footer-name{
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+}

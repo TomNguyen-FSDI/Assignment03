@@ -1,0 +1,41 @@
+
+.total{
+    margin-top:.2rem;
+    color: #ca5d5d;
+    font-weight: 700;
+}
+.btn-q{
+    margin: 0 0.5rem;
+    font-size: 0.7rem;
+    padding: 4px;
+}
+
+.btn-add{
+    background-image: linear-gradient(to right, #f6d365 0%, #fda085 51%, #f6d365 100%);
+    width: calc( var(--product_width) - 2px);
+}
+
+.btn-addE{    
+    /* button effects: 
+        https://codepen.io/pirrera/pen/bqVeGx */
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+   /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
+   border:none;
+}
+
+.btn-addE:hover {
+    background-position: right center; /* change the direction of the change here */
+}
+
+.alert-minimum{
+    color:rgb(189, 93, 93);
+    margin:0 0 0 -60px;
+    padding:0 0 0 0;
+    width:60px;
+    font-size:12px;
+    line-height: 1;
+    vertical-align: middle;
+    text-transform: capitalize;
+}
