@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component  } from 'react';
 import ProductService from '../services/productService';
 import Product from './product';
 import './catalog.css'
@@ -150,11 +150,11 @@ class Catalog extends Component {
         this.setState({ cartImg: img })
     }
 
-    handleCart = (stateChanged, item) => {
+    handleCart = (stateChanged) => {
         this.setState({ isCart: stateChanged });
         this.setState({ addToCart: stateChanged });
         // console.log(item.price);
-        this.displayCart(item);
+        this.displayCart();
 
     }
 
