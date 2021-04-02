@@ -7,6 +7,7 @@ class Home extends Component {
     render() { 
         return (
             <div className="homepage" style={{backgroundImage: "url(/images/homepage.jpg)"}}>
+            {/* <div className="homepage" style={{backgroundImage: "url(https://TomNguyen-FSDI.github.io/organika/images/homepage.jpg)"}}> */}
                 <h1>Welcome to <span className="homepage-welcome">Organika</span></h1>
                 <Footer cName="footer-cr-absolute"></Footer>
             </div> 

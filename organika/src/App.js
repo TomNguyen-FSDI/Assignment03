@@ -20,6 +20,7 @@ function App() {
 
         <Switch>
           <Route path="/" exact component={Home}></Route>
+          <Route path="/organika" exact component={Home}></Route>
           <Route path="/home" exact component={Home}></Route>
           <Route path="/catalog" exact component={Catalog} ></Route>
           <Route path="/about" exact component={About}></Route>

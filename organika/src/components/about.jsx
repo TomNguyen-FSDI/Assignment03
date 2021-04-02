@@ -72,6 +72,7 @@ class About extends Component {
             return (
                 <div className="about-profile">
                     <img src="/images/profile picture.jpg" alt="profile.jpg"></img>
+                    {/* <img src="https://TomNguyen-FSDI.github.io/organika/images/profile picture.jpg" alt="profile.jpg"></img> */}
                     <p className="">Email: Tommie_89@yahoo.com</p>
                     <p>Phone: (123) 456-7890</p>
                 </div>

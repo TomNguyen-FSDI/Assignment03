@@ -12,7 +12,7 @@ class NavBar extends Component {
       >
         <div className="navbar-expand-sm navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
-            <li className="nav-item active">
+            <li className="nav-item">
               <Link className="nav-link" to="/home">
                 Home <span className="sr-only">(current)</span>
               </Link>
