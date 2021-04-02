@@ -3,8 +3,11 @@ import './quantityPicker.css';
 import './product.css';
 
 
+
+
 class QuantityPicker extends Component {
     state = {
+
         quantity: this.props.quantityMinimum,
         name: 'Tom',
         minimumIsTrue: false
@@ -34,7 +37,10 @@ class QuantityPicker extends Component {
         }
         this.setState({minimumIsTrue:false});
         let current = this.state.quantity - 1;
-        this.setState({ quantity: current });
+        this.setState( prevState => {
+            return{ quantity: prevState.quantity-1
+            };
+        } );
         this.props.onValueChange(current);
     }
     increaseQuantity = () => {

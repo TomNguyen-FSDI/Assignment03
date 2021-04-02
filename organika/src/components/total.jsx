@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 
 class Total extends Component {
-    state = { 
-        tax: 0.08,
-     }
     render() { 
         return ( 
             <div>

@@ -8,7 +8,10 @@ import Home from './components/home';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import About from './components/about';
 
+
+
 function App() {
+
   return (
     <BrowserRouter>
       <div className="App">
@@ -18,7 +21,7 @@ function App() {
         <Switch>
           <Route path="/" exact component={Home}></Route>
           <Route path="/home" exact component={Home}></Route>
-          <Route path="/catalog" exact component={Catalog}></Route>
+          <Route path="/catalog" exact component={Catalog} ></Route>
           <Route path="/about" exact component={About}></Route>
         </Switch>
 

@@ -1,14 +1,10 @@
+:root{
+    --cart-width: 100px;
+}
 .cat-title{
     margin: 2rem 0;
 }
 
-.checkout-cart-container{
-    width: 29rem;
-    height: 29rem;
-    border-radius: 8px;
-    border: 2px solid grey;
-    margin: 1rem 0;
-}
 
 .content{
     height: 100vh;
