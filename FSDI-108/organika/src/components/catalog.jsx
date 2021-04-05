@@ -4,6 +4,7 @@ import Product from './product';
 import './catalog.css'
 import Footer from './footer';
 import CartProduct from './cartProduct';
+import { connect} from "react-redux";
 
 
 
@@ -42,12 +43,12 @@ class Catalog extends Component {
                         )}
                         <Footer cName="footer-cr"></Footer>
                     </div>
-                    {this.displayCart()}
-                    {this.state.isCart ? <div className="checkout-cart-container">
+                    {/* {this.displayCart()} */}
+                    {this.props.cart.length>0 ? <div className="checkout-cart-container">
                     <label className="cart-subtotal-title">Subtotal:</label>
                     <p className="cart-subtotal">$ {this.onChangeSubtotal()}</p>
-                    {this.state.cart.map(
-                        p => <CartProduct key={p.id} cartImg={p.image} cartTitle={p.title} cartPrice={p.price} cartQuantity={p.stock}></CartProduct>
+                    {this.props.cart.map(
+                        p => <CartProduct key={p.product.id} cartImg={p.product.image} cartTitle={p.product.title} cartPrice={p.product.price} cartQuantity={p.quantity}></CartProduct>
                     )}
                     </div> : ''}
                 </div>
@@ -57,8 +58,11 @@ class Catalog extends Component {
 
     onChangeSubtotal = () => {
         let total=0;
-        for ( var item of this.state.cart){
-            total = total + (item.price*item.stock);
+        // for ( var item of this.state.cart){
+        //     total = total + (item.price*item.quantity);
+        // }
+        for (var i=0;i<this.props.cart.length;i++){
+            total = total + this.props.cart[i].product.price*this.props.cart[i].quantity;
         }
         // this.setState({subTotal: total});
         return total.toFixed(2);
@@ -68,7 +72,7 @@ class Catalog extends Component {
         // console.log(cartItem);
         // const reduxPrice = useSelector(state => state.price);
         // console.log(reduxPrice);
-        if (this.state.isCart) {
+        if (this.props.cart.length>0) {
             if (this.state.addToCart) {
                 this.addToCart();
             }
@@ -101,7 +105,7 @@ class Catalog extends Component {
             if (this.state.cart[i].title === this.state.cartTitle) {
                 let items = [...this.state.cart];
                 let item = items[i];
-                item.stock = this.state.cartQuantity;
+                item.stock = item.stock+this.state.cartQuantity;
                 items[i] = item;
                 this.setState({
                     cart: items
@@ -170,4 +174,10 @@ class Catalog extends Component {
 
 }
 
-export default Catalog;
+const mapStateToProps = (state) => {
+    return {
+      cart: state
+    };
+  };
+
+export default connect(mapStateToProps,null)(Catalog);

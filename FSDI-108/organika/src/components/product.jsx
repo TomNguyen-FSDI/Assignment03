@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import QuantityPicker from './quantityPicker';
 import './product.css'
 import Total from './total';
+import { connect} from "react-redux";
+import { addProductToCart} from "../actions/actions";
 
 
 class Product extends Component {
@@ -40,8 +42,13 @@ class Product extends Component {
         this.props.getProduct(title);
         this.props.getQuantity(this.state.quantity);
         this.props.onCartChange(true);
+        var prodInCart = {
+            product: this.props.item,
+            quantity: this.state.quantity,
+        };
+        this.props.addProductToCart(prodInCart);
     }
 
 }
  
-export default Product;
+export default connect(null,{addProductToCart})(Product);

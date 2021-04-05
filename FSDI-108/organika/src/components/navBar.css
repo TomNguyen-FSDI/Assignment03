@@ -1,0 +1,15 @@
+.my-navbar {
+    color: red;
+}
+.cart-container{
+    border:1px red solid;
+    color:rgba(255,255,255,.5);
+    width:100px;
+}
+.cart-icon{
+    margin-right:3px;
+}
+.cart-number{
+    color:whitesmoke;
+    border-radius: 100px;
+}

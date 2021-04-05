@@ -1,9 +1,9 @@
-import priceReducer from './price';
+import cartReducer from './cartReducer';
 
 import {combineReducers} from 'redux';
 
 const allReducers = combineReducers ({
-    price: priceReducer
+    state: cartReducer
 });
 
 export default allReducers;
