@@ -14,6 +14,7 @@ class CartCheckout extends Component {
             <div className="checkout-container">
                 <div className="checkout-image">
                     <img  src={"/images/products/"+image} alt="product"></img>
+                    {/* <img  src={"https://TomNguyen-FSDI.github.io/organika/images/products/"+image} alt="product"></img> */}
                 </div>
                 <div>
                     <p className="detail-title"><label>{title}</label>

@@ -7,6 +7,17 @@
     text-align: center;
     width: 100%;
 }
+.footer-cr-cart{
+    position:absolute;
+    bottom: 0;
+    min-width: 1000px;
+    text-align: center;
+}
+.footer-cr-cart-flex{
+    margin-top: 100px;
+    min-width:1000px;
+    text-align: center;
+}
 .footer-name{
     font-weight: bold;
     text-align: center;
