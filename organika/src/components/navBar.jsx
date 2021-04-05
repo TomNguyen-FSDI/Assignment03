@@ -14,8 +14,8 @@ class NavBar extends Component {
       >
         <div className="navbar-expand-sm navbar-collapse my-navbar">
           <ul className="navbar-nav">
-            <li className="nav-item">
-              <Link className="nav-link btn-outline-info" to="/home">
+            <li className="nav-item btn-outline-info">
+              <Link className="nav-link" to="/home">
                 Home 
               </Link>
             </li>
