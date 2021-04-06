@@ -13,3 +13,26 @@
     color:whitesmoke;
     border-radius: 100px;
 }
+.cart-nav{
+    min-width:1050px;
+}
+
+
+@media(min-width:575px){
+    .btn-right{
+        position:absolute;
+        right:1rem;
+        z-index: 1;
+    }
+    .btn-right-of-cart{
+    width: var(--cart-width);
+    position:absolute;
+    right:var(--cart-width);
+    z-index: 1;
+}
+}
+/* @media(min-width:999px){
+    .btn-right{
+        margin-left: calc(999px - 100px);
+    }
+} */

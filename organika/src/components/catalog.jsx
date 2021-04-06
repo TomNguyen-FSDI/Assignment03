@@ -5,7 +5,7 @@ import './catalog.css'
 import Footer from './footer';
 import CartProduct from './cartProduct';
 import { connect} from "react-redux";
-
+import NavBar from './navBar';
 
 
 class Catalog extends Component {
@@ -33,6 +33,11 @@ class Catalog extends Component {
         return (
 
             <React.Fragment>
+                {this.props.cart.length > 0 ?
+                        <NavBar cartBtn="btn-right-of-cart"></NavBar>
+                        :
+                        <NavBar cartBtn="btn-right"></NavBar>
+                    }
                 <div className="container-fluid content">
 
                     <div className="catalog-page container">

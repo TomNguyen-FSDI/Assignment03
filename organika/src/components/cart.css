@@ -13,7 +13,7 @@
 .cart-summary{
     border:1px lightgray solid;
     width: 250px;
-    height: 200px;
+    height: 230px;
     /* right:0; */
     border-radius:3px;
     margin: 1rem 0;
@@ -53,4 +53,10 @@
 .cart-order-summary-total-price{
     float: right;
     padding-right:2px;
+}
+
+@media (max-width: 999px){
+    .cart-details{
+        width: 700px;
+    }
 }

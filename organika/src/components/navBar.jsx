@@ -9,8 +9,9 @@ class NavBar extends Component {
   render() {
     return (
       <nav
-        className="navbar navbar-expand-lg navbar-dark"
-        style={{ backgroundColor: "rgb(22,94,106)" }}
+        className={"navbar navbar-expand-lg navbar-dark " + this.props.cartNav}
+        // style={{ backgroundColor: "rgb(22,94,106)", minWidth:"1050px"}}
+        style={{ backgroundColor: "rgb(22,94,106)"}}
       >
         <div className="navbar-expand-sm navbar-collapse my-navbar">
           <ul className="navbar-nav">
@@ -29,9 +30,9 @@ class NavBar extends Component {
                 About
               </Link>
             </li>
-            <li className="nav-item btn-outline-info">
+            <li className={"nav-item btn-outline-info " + this.props.cartBtn}>
               <Link className="nav-link" to="/cart">
-              <span className="badge cart-badge cart-number">
+              <span className={"badge cart-badge cart-number"}>
               {this.displayCartQuantity()}
               </span>
               <i className="fas fa-shopping-cart cart-icon"></i>Cart

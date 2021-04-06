@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Footer from './footer';
 import './about.css';
+import NavBar from './navBar';
 
 class About extends Component {
     state = {
@@ -9,6 +10,7 @@ class About extends Component {
     render() {
         return (
             <div>
+                <NavBar cartBtn="btn-right"></NavBar>
                 <div className="jumbotron">
                     {this.getNameInfo()}
                     {this.getDetailInfo()}

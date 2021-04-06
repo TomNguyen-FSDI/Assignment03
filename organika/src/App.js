@@ -17,7 +17,7 @@ function App() {
     <BrowserRouter>
       <div className="App">
         {/* need to import NavBar from ./components/navBar */}
-        <NavBar></NavBar>
+        
 
         <Switch>
           <Route path="/" exact component={Home}></Route>
